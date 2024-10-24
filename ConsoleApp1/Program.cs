@@ -11,35 +11,27 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-           Random r = new Random();
-            int znamka = r.Next(1,6);
-            string slovne;
-            switch (znamka)
+            int hpbatman = 100;
+            int hpsuperman = 100;
+            Random hit = new Random();
+            while (hpbatman > 0 && hpsuperman > 0) 
             {
-                case 1:
-                    slovne = "výborný";
-                    break;
-                case 2:
-                    slovne = "chvalitebny";
-                    break;
-                case 3:
-                    slovne = "dobry";
-                    break;
-                case 4:
-                    slovne = "dostatocny";
-                    break;
-                case 5:
-                    slovne = "nedostatocny";
-                    break;
-                default:
-                    slovne = "error";
-                    break;
+                int hitbatman = hit.Next(1, 10);
+                int hitsupeman = hit.Next(1, 10);
+                hpbatman -= hitsupeman;
+                hpsuperman -= hitbatman;
+                if (hpbatman <= 0)
+                    Console.WriteLine("Superman vyhral");
+                else
+                    Console.WriteLine("Batmanhp: " + hpbatman);
+                if (hpsuperman <= 0)
+                    Console.WriteLine("Batman vyhral");
+                else
+                    Console.WriteLine("Hpsuperman: " + hpsuperman); 
+
+
+
             }
-            Console.WriteLine("peter dostal: " + znamka + " " + slovne);
-
-
-
-            
         }
     }
 }
