@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,15 +11,35 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string[] mena = { "jozo", "fero", "majo" };
-            Random cislo = new Random();
-            foreach (string meno in mena)
+           Random r = new Random();
+            int znamka = r.Next(1,6);
+            string slovne;
+            switch (znamka)
             {
-                int znamka = cislo.Next(1, 6);
-                Console.WriteLine(meno + znamka);
-
-
+                case 1:
+                    slovne = "výborný";
+                    break;
+                case 2:
+                    slovne = "chvalitebny";
+                    break;
+                case 3:
+                    slovne = "dobry";
+                    break;
+                case 4:
+                    slovne = "dostatocny";
+                    break;
+                case 5:
+                    slovne = "nedostatocny";
+                    break;
+                default:
+                    slovne = "error";
+                    break;
             }
+                Console.WriteLine("peter dostal: " +znamka + " " + slovne); 
+
+
+
+            
         }
     }
 }
