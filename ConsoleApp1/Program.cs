@@ -10,12 +10,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int rok = 2024;
-            Console.WriteLine("Npaíš rok narodenia");
-            int narodenia = int.Parse(Console.ReadLine());
-            int vek = rok - narodenia;
-            Console.WriteLine("Máš " + vek + " rokov");
+            string[] mena = { "jozo", "fero", "majo" };
+            Random cislo = new Random();
+            foreach (string meno in mena)
+            {
+                int znamka = cislo.Next(1, 6);
+                Console.WriteLine(meno + znamka);
 
+
+            }
         }
     }
 }
