@@ -35,7 +35,7 @@ namespace ConsoleApp1
                     slovne = "error";
                     break;
             }
-                Console.WriteLine("peter dostal: " +znamka + " " + slovne); 
+            Console.WriteLine("peter dostal: " + znamka + " " + slovne);
 
 
 
