@@ -11,23 +11,65 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int hpbatman = 100;
-            int hpsuperman = 100;
-            Random hit = new Random();
-            while (hpbatman > 0 && hpsuperman > 0) 
+            List<string> Januar = new List<string>();
+            List<string> Marec = new List<string>();
+            List<string> Februar = new List<string>();
+
+            Januar.Add("Peter");
+            Januar.Add("Jozef");
+            Januar.Add("Marián");
+            Januar.Add("Marta");
+            Januar.Add("Miloš");
+            Januar.Add("Kmetka");
+            Januar.Add("Sofia");
+            Februar.Add("Mária");
+            Februar.Add("Júlia");
+            Februar.Add("Sabína");
+            Februar.Add("Roman");
+            Februar.Add("Filip");
+            Februar.Add("Janka");
+            Februar.Add("Ján");
+            Marec.Add("Julius");
+            Marec.Add("Filip");
+            Marec.Add("Matúš");
+            Marec.Add("Beata");
+            Marec.Add("Erika");
+            Marec.Add("Štefan");
+            Marec.Add("Patrik");
+
+            Console.WriteLine("Napíš mesiac ktorý chceš vybrať(j/f/m):");
+            string mesiac = Console.ReadLine();
+
+
+            if (mesiac == "j")
             {
-                int hitbatman = hit.Next(1, 10);
-                int hitsupeman = hit.Next(1, 10);
-                hpbatman -= hitsupeman;
-                hpsuperman -= hitbatman;
-                if (hpbatman <= 0)
-                    Console.WriteLine("Superman vyhral");
-                else
-                    Console.WriteLine("Batmanhp: " + hpbatman);
-                if (hpsuperman <= 0)
-                    Console.WriteLine("Batman vyhral");
-                else
-                    Console.WriteLine("Hpsuperman: " + hpsuperman); 
+                Console.WriteLine("Zadaj deň(1-7): ");
+                int den = int.Parse(Console.ReadLine());
+                Console.WriteLine(Januar[den - 1]);
+
+            }
+            else if (mesiac == "f")
+            {
+                Console.WriteLine("Zadaj deň(1-7): ");
+                int den = int.Parse(Console.ReadLine());
+                Console.WriteLine(Februar[den - 1]);
+            }
+            else if (mesiac == "m")
+            {
+                Console.WriteLine("Zadaj deň(1-7): ");
+                int den = int.Parse(Console.ReadLine());
+                Console.WriteLine(Marec[den - 1]);
+            }
+            else
+            {
+                foreach (string i in Januar)
+                { Console.Write(i + " "); }
+
+                foreach (string i in Februar)
+                { Console.Write(i + " "); }
+
+                foreach (string i in Marec)
+                { Console.Write(i + " "); }
 
 
 
