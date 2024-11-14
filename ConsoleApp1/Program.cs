@@ -68,7 +68,7 @@ namespace ConsoleApp1
                 foreach (string i in Februar)
                 { Console.Write(i + " "); }
 
-                foreach (string i in Marec)
+                foreach (string i in Marec)//ahoj
                 { Console.Write(i + " "); }
 
 
